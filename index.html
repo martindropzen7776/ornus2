@@ -33,13 +33,13 @@
             display: flex;
             justify-content: center;
             padding: 20px;
-            margin-top: -30px; /* Ajusta este valor para que se acerque o se aleje más */
+            margin-top: -30px; /* Ajusta según prefieras */
         }
 
         .cta-button {
+            position: relative;
             display: flex;
             align-items: center;
-            justify-content: center;
             background-color: #ff6699;
             color: white;
             border: none;
@@ -54,11 +54,17 @@
         }
 
         .cta-button img {
+            position: absolute;
+            left: 10px;
             width: 40px;
             height: 40px;
             border-radius: 8px;
-            margin-right: 10px;
             object-fit: cover;
+        }
+
+        .cta-text {
+            flex: 1;
+            text-align: center;
         }
 
         .cta-button:hover {
@@ -72,7 +78,7 @@
         <div class="cta-wrapper">
             <a href="https://tu-enlace-aqui.com" class="cta-button">
                 <img src="fotologo.png" alt="Icono">
-                Contenido exclusivo
+                <span class="cta-text">Watch Live on Kick</span>
             </a>
         </div>
     </div>
