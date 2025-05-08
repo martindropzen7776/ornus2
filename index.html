@@ -14,9 +14,6 @@
 
         body, html {
             height: 100%;
-            display: flex;
-            justify-content: flex-start; /* Cambiado para empujar la imagen hacia arriba */
-            align-items: center;
             background: #f5f5f5;
         }
 
@@ -24,12 +21,13 @@
             position: relative;
             width: 100%;
             max-width: 480px;
-            margin-top: 0; /* Ajusta este valor si quieres más separación */
+            margin: 0 auto;
         }
 
         .hero {
             width: 100%;
             display: block;
+            vertical-align: top;
         }
 
         .overlay {
