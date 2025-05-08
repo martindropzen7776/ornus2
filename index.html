@@ -21,6 +21,11 @@
             width: 100%;
             max-width: 480px;
             margin: 0 auto;
+            position: relative;
+        }
+
+        .hero-wrapper {
+            position: relative;
         }
 
         .hero {
@@ -29,60 +34,51 @@
             vertical-align: top;
         }
 
-.cta-wrapper {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    margin-top: -30px;
-    position: relative;
-}
+        /* Difuminado sobre la imagen */
+        .hero-wrapper::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px; /* Altura del degradado */
+            background: linear-gradient(to top, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0));
+        }
 
-.cta-wrapper::before {
-    content: "";
-    position: absolute;
-    top: -80px; /* Ajusta esto según lo alto que quieras el degradado */
-    left: 0;
-    width: 100%;
-    height: 150px;
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0));
-    z-index: -1;
-}
-        
-.cta-button {
-    position: relative;
-    display: flex;
-    align-items: center;
-    background-color: #ff6699;
-    color: white;
-    border: none;
-    padding: 20px 30px; /* Botón más grande */
-    border-radius: 15px; /* Un poco más redondeado */
-    font-size: 20px; /* Texto más grande */
-    text-decoration: none;
-    width: 95%;
-    max-width: 450px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
-    animation: bounce 2s infinite; /* Animación */
-}
+        .cta-wrapper {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            margin-top: 0;
+        }
 
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-8px);
-    }
-}
+        .cta-button {
+            position: relative;
+            display: flex;
+            align-items: center;
+            background-color: #ff6699;
+            color: white;
+            border: none;
+            padding: 20px 30px; /* Botón más grande */
+            border-radius: 15px;
+            font-size: 20px;
+            text-decoration: none;
+            width: 95%;
+            max-width: 450px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+            animation: bounce 2s infinite;
+        }
 
         .cta-button img {
             position: absolute;
             left: 10px;
-            width: 40px;
-            height: 40px;
+            width: 60px;
+            height: 60px;
             border-radius: 8px;
             object-fit: cover;
         }
+
         .cta-text {
             flex: 1;
             text-align: center;
@@ -91,14 +87,25 @@
         .cta-button:hover {
             background-color: #ff3366;
         }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="Imagen de WhatsApp 2025-05-08 a las 12.56.59_85167761.jpg" alt="Hero Image" class="hero">
+        <div class="hero-wrapper">
+            <img src="Imagen de WhatsApp 2025-05-08 a las 12.56.59_85167761.jpg" alt="Hero Image" class="hero">
+        </div>
         <div class="cta-wrapper">
             <a href="https://tu-enlace-aqui.com" class="cta-button">
-                <img src="fotologo.png" alt="Icono">
+                <img src="foto-perfil.jpg" alt="Icono">
                 <span class="cta-text">Watch Live on Kick</span>
             </a>
         </div>
