@@ -18,7 +18,6 @@
         }
 
         .container {
-            position: relative;
             width: 100%;
             max-width: 480px;
             margin: 0 auto;
@@ -30,16 +29,11 @@
             vertical-align: top;
         }
 
-        .overlay {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 40%;
-            background: linear-gradient(to top, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+        .cta-wrapper {
             display: flex;
             justify-content: center;
-            align-items: flex-end;
             padding: 20px;
+            margin-top: -30px; /* Ajusta este valor para que se acerque o se aleje más */
         }
 
         .cta-button {
@@ -75,7 +69,7 @@
 <body>
     <div class="container">
         <img src="Imagen de WhatsApp 2025-05-08 a las 12.56.59_85167761.jpg" alt="Hero Image" class="hero">
-        <div class="overlay">
+        <div class="cta-wrapper">
             <a href="https://tu-enlace-aqui.com" class="cta-button">
                 <img src="foto-perfil.jpg" alt="Icono">
                 Watch Live on Kick
