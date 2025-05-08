@@ -43,16 +43,28 @@
         }
 
         .cta-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background-color: #ff6699;
             color: white;
             border: none;
-            padding: 15px 30px;
-            border-radius: 30px;
+            padding: 10px 20px;
+            border-radius: 10px;
             font-size: 16px;
-            cursor: pointer;
             text-decoration: none;
+            width: 90%;
+            max-width: 400px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             transition: background-color 0.3s ease;
+        }
+
+        .cta-button img {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            margin-right: 10px;
+            object-fit: cover;
         }
 
         .cta-button:hover {
@@ -64,7 +76,10 @@
     <div class="container">
         <img src="Imagen de WhatsApp 2025-05-08 a las 12.56.59_85167761.jpg" alt="Hero Image" class="hero">
         <div class="overlay">
-            <a href="https://tu-enlace-aqui.com" class="cta-button">Entrar</a>
+            <a href="https://tu-enlace-aqui.com" class="cta-button">
+                <img src="foto-perfil.jpg" alt="Icono">
+                Watch Live on Kick
+            </a>
         </div>
     </div>
 </body>
