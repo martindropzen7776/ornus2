@@ -53,14 +53,27 @@
             transition: background-color 0.3s ease;
         }
 
-        .cta-button img {
-            position: absolute;
-            left: 10px;
-            width: 40px;
-            height: 40px;
-            border-radius: 8px;
-            object-fit: cover;
-        }
+.cta-button img {
+    position: absolute;
+    left: 10px;
+    width: 60px; /* más grande que antes */
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+    animation: pulse 2s infinite; /* agrega animación */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
         .cta-text {
             flex: 1;
