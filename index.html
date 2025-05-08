@@ -53,79 +53,80 @@
             margin-top: 0;
         }
 
-        .cta-button {
-            position: relative;
-            display: flex;
-            align-items: center;
-            background-color: #ff6699;
-            color: white;
-            border: none;
-            padding: 20px 30px; /* Botón más grande */
-            border-radius: 15px;
-            font-size: 20px;
-            text-decoration: none;
-            width: 95%;
-            max-width: 450px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease;
-            animation: bounce 2s infinite;
-        }
-
-        .cta-button img {
-            position: absolute;
-            left: 10px;
-            width: 60px;
-            height: 60px;
-            border-radius: 8px;
-            object-fit: cover;
-        }
-
-        .cta-text {
-            flex: 1;
-            text-align: center;
-        }
-
-        .cta-button:hover {
-            background-color: #ff3366;
-        }
-
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-8px);
-            }
-        }
-
-        .promo-text {
-            text-align: center;
-            margin: 15px 20px 20px 20px; /* Un poco más arriba todavía */
-            font-family: 'Montserrat', sans-serif;
-            font-size: 32px;
-            font-weight: 700;
-            color: #ff6699;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
-            animation: pulseText 1.8s infinite alternate;
-        }
-
-        @keyframes pulseText {
-            from {
-                transform: scale(1);
-            }
-            to {
-                transform: scale(1.1);
-            }
-        }
-
 .cta-block {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px; /* espacio entre botón y texto */
+    gap: 15px;
     padding: 20px;
+    margin: 20px;
+    background: rgba(255, 182, 193, 0.5); /* Rosa pastel translúcido */
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.cta-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #ff6699;
+    color: white;
+    border: none;
+    padding: 20px 30px;
+    border-radius: 15px;
+    font-size: 20px;
+    text-decoration: none;
+    width: 95%;
+    max-width: 450px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    animation: bounce 2s infinite;
+}
+
+.cta-button img {
+    position: absolute;
+    left: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.cta-text {
+    flex: 1;
+    text-align: center;
+}
+
+.promo-text {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #ff0055;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+    animation: pulseText 1.8s infinite alternate;
+}
+
+/* Animaciones */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes pulseText {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
 }
 
         
@@ -145,8 +146,6 @@
     <div class="promo-text">80% OFF your first month</div>
 </div>
             
-        </div>
-        <div class="promo-text">80% OFF your first month</div>
     </div>
 </body>
 </html>
